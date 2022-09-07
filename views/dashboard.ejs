@@ -1,0 +1,41 @@
+<%- include('layout.ejs'); %>
+<div class="container">
+    <div class="row justify-content-center">
+        <body> 
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">url path</th>
+                <th scope="col">reach count</th>
+                <th scope="col">like count</th>
+                <th scope="col">comment count</th>
+                <th scope="col">share count</th>
+                <th scope="col">viral</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% urlList.forEach(meme =>{%>
+                <tr>
+                    <th scope="row"><%= meme._id %></th>
+                    <td><%= meme.urlname%></td>
+                    <td><%= meme.reachCount%></td>
+                    <td><%= meme.likeCount%></td>
+                    <td><%= meme.commentCount%></td>
+                    <td><%= meme.shareCount%></td>
+                    <td><%= meme.viral%></td>
+                </tr>
+                    <%})%>
+              
+            </tbody>
+          </table>
+        </body>
+    </div>
+</div>
+<div>
+    <a href="/memeRegister"> <button type="submit" class="btn btn-primary btn-lg btn-block login-button">New Meme Register</button> </a>
+</div>
+
+</body>
+
+</html>
